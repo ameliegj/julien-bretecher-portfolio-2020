@@ -1,4 +1,5 @@
 import "./assets/styles/reset.min.css";
+import "./assets/styles/bootstrap-grid.min.css";
 
 import Vue from "vue";
 import App from "./App.vue";

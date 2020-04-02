@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <div class="container intro">
-      <div class="logo">julien<span class="bold">bretecher</span></div>
+    <div class="container-fluid intro col col-10 col-lg-8 offset-lg-1">
+      <div class="logo mt-5">julien<span class="bold">bretecher</span></div>
       <div>
         <h1>
           hello there, i'm <span>julien</span>, a french product owner and
@@ -11,9 +11,9 @@
       </div>
       <div></div>
     </div>
-    <div class="container">
-      <div class="infos">
-        <div class="infos-card">
+    <div class="container-fluid col-10 col-lg-10 offset-lg-1 intro">
+      <div class="infos row justify-content-between">
+        <div class="infos-card col-10 col-lg-5">
           <div class="label">in short...</div>
           <p>
             i’m in my 4th year of hétic’s grande école, where i study design,
@@ -23,12 +23,15 @@
             <a href="" class="tw">• more about me</a>
           </div>
         </div>
-        <div class="infos-card">
+        <div class="infos-card col-10 col-lg-5">
           <div class="label">what i'm looking for...</div>
           <p>
             creative and exciting projects ! I’m also searching for a 6 months
             internship starting in july 2020, all around the 🌍 !
           </p>
+          <div>
+            <a href="" class="tw">• download my resume</a>
+          </div>
         </div>
       </div>
     </div>
@@ -97,7 +100,7 @@ export default {
 <style lang="scss" scoped>
 .home {
   .intro {
-    min-height: 75vh;
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -106,40 +109,41 @@ export default {
       font-weight: 400;
       font-size: 24px;
       color: $main;
-      margin-top: calc((100vw / 12) * 1);
+      //margin-top: calc((100vh / 12) * 1);
       .bold {
         font-weight: 600;
       }
     }
     h1 {
-      width: calc((100vw / 12) * 7);
+      //width: calc((100vw / 12) * 7);
       span {
         color: $main;
       }
     }
   }
   .infos {
-    display: flex;
-    flex-direction: row;
+  //   display: flex;
+  //   flex-direction: row;
     background-color: $main-lighter;
-    justify-content: space-between;
+  //   justify-content: space-between;
     padding: 60px;
     .infos-card {
-      width: calc((100vw / 12) * 4);
+      //margin: 60px auto;
+  //   //   width: calc((100vw / 12) * 4);
       .label {
         color: $main;
       }
+      p {
+        margin-bottom: 30px;
+      }
       a {
         color: $main;
-        margin-top: 30px;
-        padding-top: 30px;
       }
     }
-  }
-  .title {
-    display: flex;
-    flex-direction: row;
-    margin: 150px 0px 60px 0px;
+  // .title {
+  //   display: flex;
+  //   flex-direction: row;
+  //   margin: 150px 0px 60px 0px;
   }
 
 }
