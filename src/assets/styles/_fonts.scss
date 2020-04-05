@@ -46,8 +46,8 @@
 h1 {
   font-family: 'SpaceGrotesk';
   font-weight: 300;
-  font-size: 52px;
-  line-height: 75px;
+  font-size: 40px;
+  line-height: 60px;
 }
 
 h2 {
@@ -93,4 +93,21 @@ a {
   font-weight: 200;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+@include media-breakpoint-up(sm) {
+  h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+@include media-breakpoint-up(md) {
+  h1 {
+    font-size: 52px;
+    line-height: 75px;
+  }
+}
+@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-up(xl) {
 }

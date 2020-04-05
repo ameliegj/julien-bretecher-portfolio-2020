@@ -1,41 +1,20 @@
 <template>
   <div class="home">
-    <div class="container-fluid intro col col-10 col-lg-8 offset-lg-1">
+    <div class="container-fluid intro col 
+    col-10 col-sm-10 col-md-7 col-lg-7 col-xl-6
+    offset-1 offset-sm-1 offset-md-2 offset-lg-1 offset-xl-1">
       <div class="logo mt-5">julien<span class="bold">bretecher</span></div>
       <div>
         <h1>
-          hello there, i'm <span>julien</span>, a french product owner and
+          hello, i'm <span>julien</span>, a french product owner and
           product designer based in Paris
         </h1>
         <SocialLinks />
       </div>
       <div></div>
     </div>
-    <div class="container-fluid col-10 col-lg-10 offset-lg-1 intro">
-      <div class="infos row justify-content-between">
-        <div class="infos-card col-10 col-lg-5">
-          <div class="label">in short...</div>
-          <p>
-            i’m in my 4th year of hétic’s grande école, where i study design,
-            webdev, marketing and entrepreneurship.
-          </p>
-          <div>
-            <a href="" class="tw">• more about me</a>
-          </div>
-        </div>
-        <div class="infos-card col-10 col-lg-5">
-          <div class="label">what i'm looking for...</div>
-          <p>
-            creative and exciting projects ! I’m also searching for a 6 months
-            internship starting in july 2020, all around the 🌍 !
-          </p>
-          <div>
-            <a href="" class="tw">• download my resume</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
+    <InfosSection/>
+    <!-- <div class="container">
       <div class="title">
         <svg
           width="28px"
@@ -82,17 +61,19 @@
         </svg>
         <h4>selected work cases</h4>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import SocialLinks from "@/components/SocialLinks.vue";
+import InfosSection from "@/components/InfosSection.vue";
 
 export default {
   components: {
-    SocialLinks
+    SocialLinks,
+    InfosSection
   }
 };
 </script>
@@ -100,6 +81,30 @@ export default {
 <style lang="scss" scoped>
 .home {
   .intro {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    .logo {
+      font-family: "GTAmericaExpanded";
+      font-weight: 400;
+      font-size: 24px;
+      color: $main;
+      padding: 30px 0px;
+      .bold {
+        font-weight: 600;
+      }
+    }
+    h1 {
+      span {
+        color: $main;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+  }
+  @include media-breakpoint-up(md) {
+    .intro {
     min-height: 88vh;
     display: flex;
     flex-direction: column;
@@ -109,42 +114,20 @@ export default {
       font-weight: 400;
       font-size: 24px;
       color: $main;
-      //margin-top: calc((100vh / 12) * 1);
       .bold {
         font-weight: 600;
       }
     }
     h1 {
-      //width: calc((100vw / 12) * 7);
       span {
         color: $main;
       }
     }
   }
-  .infos {
-  //   display: flex;
-  //   flex-direction: row;
-    background-color: $main-lighter;
-  //   justify-content: space-between;
-    padding: 60px;
-    .infos-card {
-      //margin: 60px auto;
-  //   //   width: calc((100vw / 12) * 4);
-      .label {
-        color: $main;
-      }
-      p {
-        margin-bottom: 30px;
-      }
-      a {
-        color: $main;
-      }
-    }
-  // .title {
-  //   display: flex;
-  //   flex-direction: row;
-  //   margin: 150px 0px 60px 0px;
   }
-
+  @include media-breakpoint-up(lg) {
+  }
+  @include media-breakpoint-up(xl) {
+  }
 }
 </style>
